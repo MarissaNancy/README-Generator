@@ -18,3 +18,4 @@ function generateMarkdown(data) {
 }
 
 module.exports = generateMarkdown;
+//the generateMarkdown needs to be required in index.js
