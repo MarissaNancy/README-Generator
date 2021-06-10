@@ -25,6 +25,7 @@ function generateMarkdown(data) {
   ${data.test}
 
   ##Questions
+  ${data.questions}
 
 
 `;

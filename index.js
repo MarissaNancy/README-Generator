@@ -3,7 +3,7 @@
 
 const inquirer = require('inquirer');
 // const fs = require('fs');
-
+// const writeFile = require('./writefile');
 // const generateMarkdown = require("./generateMarkdown");
 
 // TODO: Create an array of questions for user input
@@ -15,14 +15,13 @@ const inquirer = require('inquirer');
     //return inq
 //} 
 const questions = () => {
-    inquirer
+    return inquirer
         .prompt([
             //inquirer then prompt
             {
             type: 'input',
             message: 'What would you like to name your project?',
             name: 'title',
-        
             },
             {
             type: 'input',
@@ -30,7 +29,7 @@ const questions = () => {
             name: 'description',
             },
             {
-            //its a question so type: '',
+            type: 'input',
             message: 'Would you like a Table of Contents? ',
             name: 'tofcont',
             },
@@ -48,16 +47,7 @@ const questions = () => {
             type: 'input',
             message: 'Enter the license:',
             name: 'license',
-            
-    //Create a function that returns a license badge based on which license is passed in
-    // If there is no license, return an empty string
-//          answer?: (license) =>{
-                //if (license) {
-                //return true;    
-                //} else
-                //return empty string?
-//}
-// }
+            default: 'MIT'
             },
             {
             type: 'input',
@@ -71,12 +61,12 @@ const questions = () => {
             },
             {
             type: 'input',
-            message: ' ',
+            message: 'Provide a contact info in case someone has a question:',
             name: 'questions',
-            },
+            },   
 
-        ])
-}
+        ]);
+};
     
 
 // TODO: Create a function to initialize app
@@ -86,14 +76,14 @@ function init() {}
 init();
 
 questions()
-//      .then((results)) => {
-//           return generateMarkdown(results);
+//    .then((questionsresults) => {
+//         return generateMarkdown(questionsresults);
 //      })
-//      .then(filename => {
-//          return writteFile(filename)
+//      .then(readme.md => {
+//         return writeFile(readme.md)
 // })
 
 //  TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
+//  function writeToFile(fileName, data) {
 //     //generatemarkdown passed here?
 // }
