@@ -48,6 +48,16 @@ const questions = () => {
             type: 'input',
             message: 'Enter the license:',
             name: 'license',
+            
+    //Create a function that returns a license badge based on which license is passed in
+    // If there is no license, return an empty string
+//          answer?: (license) =>{
+                //if (license) {
+                //return true;    
+                //} else
+                //return empty string?
+//}
+// }
             },
             {
             type: 'input',

@@ -1,0 +1,23 @@
+{
+  "name": "static-site",
+  "version": "1.0.0",
+  "description": "For this week's homework we want to make a README generator so we can create a proffesional README. The goal is to use the Inquierer package with Node to produce the README after asking the user a series of questions for what they want to include in the file. Once we have made our app we will invoke it with the 'node index.js' in our terminal in gitbash.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarissaNancy/README-Generator.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/MarissaNancy/README-Generator/issues"
+  },
+  "homepage": "https://github.com/MarissaNancy/README-Generator#readme"
+}
