@@ -2,9 +2,9 @@
 //here we add the inquierer npm and the fs
 
 const inquirer = require('inquirer');
-// const fs = require('fs');
-// const writeFile = require('./writefile');
-// const generateMarkdown = require("./generateMarkdown");
+const fs = require("fs");
+const path = require("path")
+const generateMarkdown = require("./generateMarkdown");
 
 // TODO: Create an array of questions for user input
 //README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation,
@@ -14,9 +14,7 @@ const inquirer = require('inquirer');
 //const questions = () => {
     //return inq
 //} 
-const questions = () => {
-    return inquirer
-        .prompt([
+const questions = [
             //inquirer then prompt
             {
             type: 'input',
@@ -65,23 +63,27 @@ const questions = () => {
             name: 'questions',
             },   
 
-        ]);
-};
+        
+];
     
+function writeToFile(filename, data) {
+    return fs.writeFileSync(path.join(process.cwd(), filename), data)
+}
+
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((responses)=>{
+        writeToFile('README.md', generateMarkdown({...responses}))
+    })
+}
 
 // Function call to initialize app
 init();
 
-questions()
-//    .then((questionsresults) => {
-//         return generateMarkdown(questionsresults);
-//      })
-//      .then(readme.md => {
-//         return writeFile(readme.md)
-// })
+
+    
+     
 
 //  TODO: Create a function to write README file
 //  function writeToFile(fileName, data) {

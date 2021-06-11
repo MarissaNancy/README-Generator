@@ -1,6 +1,9 @@
 
 // TODO: Create a function to generate markdown for README
+
+//function to generate markdowns
 function generateMarkdown(data) {
+  
   return `# ${data.title}
 
   ## Descirption
@@ -17,6 +20,8 @@ function generateMarkdown(data) {
 
   ## License
   ${data.license} 
+//   ![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)
+// ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
   ## Contributing 
   ${data.contributing}
@@ -31,9 +36,9 @@ function generateMarkdown(data) {
 `;
 }
 
+//module is exported so it can generate sections for file will go
 module.exports = generateMarkdown;
 //the generateMarkdown needs to be required in index.js
-
 
 
 // TODO: Create a function that returns the license link
