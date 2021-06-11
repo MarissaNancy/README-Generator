@@ -26,6 +26,7 @@ When I click on the links in the Table of Contents
 Then I am taken to the corresponding section of the README
 
 ## Mock Up
---this is where the video for the gen goes 
+Here is the video to run my index.js file which I will run on node to produce README.md
+https://drive.google.com/file/d/1eBZ2ucj3_qqrxyyv4t0QwCZjyh4UfaDz/view?usp=sharing
 
 ## Credits 

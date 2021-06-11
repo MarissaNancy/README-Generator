@@ -28,11 +28,11 @@ const questions = () => {
             message: 'Describe the project your working on:',
             name: 'description',
             },
-            {
-            type: 'input',
-            message: 'Would you like a Table of Contents? ',
-            name: 'tofcont',
-            },
+            // {
+            // type: 'input',
+            // message: 'Would you like a Table of Contents? ',
+            // name: 'tofcont',
+            // },
             {
             type: 'input',
             message: 'Enter installation steps for your project: ',
